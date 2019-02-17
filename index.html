@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <title>Psychic game</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1>
+            Psychic Game
+        </h1>
+    </div>
+    <div id="container">
+        <p>Guess what letter I'm thinking of</p>
+    </div>
+    <div id="wins">
+        <p>Wins: </p>
+    </div>
+    <div id="losses">
+        <p>Losses: </p>
+    </div>
+    <div id="guess">
+        <p></p>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+            var compSelect = options[Math.floor(Math.random() * options.length)];
+            console.log(compSelect);
+            document.onkeyup = function () {
+                var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+                console.log(userGuess)
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
